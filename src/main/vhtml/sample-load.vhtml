@@ -1,0 +1,5 @@
+<div>
+    <h1>sample-load</h1>
+    message: {{message}}<br>
+    title: {{title}}<br>
+</div>

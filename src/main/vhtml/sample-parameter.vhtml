@@ -1,0 +1,5 @@
+<div>
+    <h1>sample-parameter</h1>
+    <div>path variable:{{pathVariable}}</div>
+    <div>get variable:{{getVariable}}</div>
+</div>

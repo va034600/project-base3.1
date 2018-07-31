@@ -1,0 +1,5 @@
+<div>
+    <h1>sample-bind</h1>
+    comment: <input type="text" v-model="comment"><br>
+    comment: {{comment}}<br>
+</div>
