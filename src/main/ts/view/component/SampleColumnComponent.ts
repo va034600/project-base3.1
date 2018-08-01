@@ -1,10 +1,9 @@
 /// <reference path="../../index.d.ts"/>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import HtmlTemplate from '../../../vhtml/sample-column.vhtml'
 
-@HtmlTemplate
 @Component({
+    template: require('../../../vhtml/sample-column.vhtml'),
 })
 export class SampleColumnComponent extends Vue {
     st = "RIGHT"

@@ -1,11 +1,10 @@
 /// <reference path="../../index.d.ts"/>
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import HtmlTemplate from '../../../vhtml/sample-load.vhtml'
 import {ActionKey} from "../module/SampleLoadModule";
 
-@HtmlTemplate
 @Component({
+    template: require('../../../vhtml/sample-load.vhtml'),
 })
 export class SampleLoadComponent extends Vue {
   /**
