@@ -1,5 +1,4 @@
 declare var process: any
-declare var require: any
 
 declare module '*.vhtml' {
     import Vue, { ComponentOptions, FunctionalComponentOptions } from 'vue'
@@ -10,9 +9,3 @@ declare module '*.vhtml' {
     const withRender: WithRender
     export default withRender
 }
-
-//
-// declare module "*!text" {
-//     const Content: string;
-//     export default Content;
-// }
