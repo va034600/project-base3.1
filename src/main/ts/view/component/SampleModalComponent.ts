@@ -1,10 +1,11 @@
 /// <reference path="../../index.d.ts"/>
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import HtmlTemplate from '../../../vhtml/sample-modal.vhtml'
 import {MutationKey} from "../module/SampleModalModule";
 
+@HtmlTemplate
 @Component({
-    template: require('../../../vhtml/sample-modal.vhtml')
 })
 export class SampleModalComponent extends Vue {
     get shown() {

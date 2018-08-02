@@ -1,10 +1,11 @@
 /// <reference path="../../index.d.ts"/>
 import Vue from "vue";
 import Component from "vue-class-component";
+import HtmlTemplate from '../../../vhtml/sample-bind.vhtml'
 import {MutationKey} from "../module/SampleBindModule";
 
+@HtmlTemplate
 @Component({
-    template: require('../../../vhtml/sample-bind.vhtml'),
 })
 export class SampleBindComponent extends Vue {
   get comment() {

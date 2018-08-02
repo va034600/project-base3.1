@@ -1,7 +1,7 @@
 declare var process: any
 declare var require: any
 
-declare module '*.html' {
+declare module '*.vhtml' {
     import Vue, { ComponentOptions, FunctionalComponentOptions } from 'vue'
     interface WithRender {
         <V extends Vue, U extends ComponentOptions<V> | FunctionalComponentOptions>(options: U): U
