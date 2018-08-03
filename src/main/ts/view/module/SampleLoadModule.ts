@@ -24,16 +24,16 @@ export const MutationKey = {
     SET_LOAD_TITLE: `${NAMESPACE_MUTATION}SET_LOAD_TITLE`,
 }
 
-function createStore(){
-    class State {
-        constructor(
-            public message: String = null,
-            public title: String = null,
-        ) { }
-    }
+export class SampleLoadState {
+    constructor(
+        public message: String = null,
+        public title: String = null,
+    ) { }
+}
 
+function createStore(){
     const getters = {
-    } as GetterTree<State, MainState>
+    } as GetterTree<SampleLoadState, MainState>
 
     const actions = {
         [ActionKey.LOAD_MESSAGE]: async ({ commit }) => {
@@ -51,7 +51,7 @@ function createStore(){
                     alert(error);
                 })
         },
-    } as ActionTree<State, MainState>
+    } as ActionTree<SampleLoadState, MainState>
 
     const mutations = {
         [MutationKey.SET_LOAD_MESSAGE] (state, payload:SampleEntity) {
@@ -60,14 +60,14 @@ function createStore(){
         [MutationKey.SET_LOAD_TITLE] (state, payload:Sample2Entity) {
             state.title = payload.title;
         },
-    } as MutationTree<State>
+    } as MutationTree<SampleLoadState>
 
     return {
-        state: new State(),
+        state: new SampleLoadState(),
         getters,
         actions,
         mutations
-    } as ModuleTree<State>
+    } as ModuleTree<SampleLoadState>
 }
 
 export default createStore()

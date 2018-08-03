@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import Vuex, {MutationTree} from 'vuex'
 import EnvironmentUtility from "../../utility/EnvironmentUtility";
-import sampleLoadModule from '../module/SampleLoadModule'
-import sampleBindModule from '../module/SampleBindModule'
-import sampleModalModule from '../module/SampleModalModule'
+import sampleLoadModule, {SampleLoadState} from '../module/SampleLoadModule'
+import sampleBindModule, {SampleBindState} from '../module/SampleBindModule'
+import sampleModalModule, {SampleModalState} from '../module/SampleModalModule'
 
 const NAMESPACE = 'main';
 const NAMESPACE_ACTION = `${NAMESPACE}/a/`
@@ -24,12 +24,12 @@ export const MutationKey = {
 }
 
 export class MainState {
-    public sampleLoad
-    public sampleBind
-    public sampleModal
+    public sampleLoad:SampleLoadState
+    public sampleBind:SampleBindState
+    public sampleModal:SampleModalState
 }
 
-function createStore():any{
+function createStore(){
     const mutations = {
     } as MutationTree<MainState>
 

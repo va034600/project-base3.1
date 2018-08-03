@@ -18,31 +18,31 @@ export const MutationKey = {
     SET_COMMENT: `${NAMESPACE_MUTATION}SET_COMMENT`,
 }
 
-function createStore(){
-    class State {
-        constructor(
-            public comment: String = null,
-        ) { }
-    }
+export class SampleBindState {
+    constructor(
+        public comment: String = null,
+    ) { }
+}
 
+function createStore(){
     const getters = {
-    } as GetterTree<State, MainState>
+    } as GetterTree<SampleBindState, MainState>
 
     const actions = {
-    } as ActionTree<State, MainState>
+    } as ActionTree<SampleBindState, MainState>
 
     const mutations = {
         [MutationKey.SET_COMMENT] (state, comment:String) {
             state.comment = comment;
         },
-    } as MutationTree<State>
+    } as MutationTree<SampleBindState>
 
     return {
-        state: new State(),
+        state: new SampleBindState(),
         getters,
         actions,
         mutations
-    } as ModuleTree<State>
+    } as ModuleTree<SampleBindState>
 }
 
 export default createStore()

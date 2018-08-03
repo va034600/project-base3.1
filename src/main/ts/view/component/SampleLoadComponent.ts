@@ -3,11 +3,15 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import HtmlTemplate from '../../../vhtml/sample-load.vhtml'
 import {ActionKey} from "../module/SampleLoadModule";
+import {MainState} from "../store/MainStore";
+import {Store} from "vuex";
 
 @HtmlTemplate
 @Component({
 })
 export class SampleLoadComponent extends Vue {
+  $store: Store<MainState>;
+
   /**
    * ライフサイクル
    */

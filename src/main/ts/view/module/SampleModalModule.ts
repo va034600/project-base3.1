@@ -18,31 +18,31 @@ export const MutationKey = {
     SET_SHOWN: `${NAMESPACE_MUTATION}SET_SHOWN`,
 }
 
-function createStore(){
-    class State {
-        constructor(
-            public shown: Boolean = false,
-        ) { }
-    }
+export class SampleModalState {
+    constructor(
+        public shown: Boolean = false,
+    ) { }
+}
 
+function createStore(){
     const getters = {
-    } as GetterTree<State, MainState>
+    } as GetterTree<SampleModalState, MainState>
 
     const actions = {
-    } as ActionTree<State, MainState>
+    } as ActionTree<SampleModalState, MainState>
 
     const mutations = {
         [MutationKey.SET_SHOWN] (state, value) {
             state.shown = value;
         },
-    } as MutationTree<State>
+    } as MutationTree<SampleModalState>
 
     return {
-        state: new State(),
+        state: new SampleModalState(),
         getters,
         actions,
         mutations
-    } as ModuleTree<State>
+    } as ModuleTree<SampleModalState>
 }
 
 export default createStore()
