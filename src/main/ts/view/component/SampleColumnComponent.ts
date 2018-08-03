@@ -1,12 +1,12 @@
 /// <reference path="../../index.d.ts"/>
-import Vue from 'vue'
 import Component from 'vue-class-component'
 import HtmlTemplate from '../../../vhtml/sample-column.vhtml'
+import BaseComponent from "./BaseComponent";
 
 @HtmlTemplate
 @Component({
 })
-export class SampleColumnComponent extends Vue {
+export class SampleColumnComponent extends BaseComponent {
     st = "RIGHT"
 
     get selectType(){

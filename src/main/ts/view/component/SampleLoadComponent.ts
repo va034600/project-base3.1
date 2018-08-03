@@ -1,17 +1,13 @@
 /// <reference path="../../index.d.ts"/>
-import Vue from 'vue'
 import Component from 'vue-class-component'
 import HtmlTemplate from '../../../vhtml/sample-load.vhtml'
 import {ActionKey} from "../module/SampleLoadModule";
-import {MainState} from "../store/MainStore";
-import {Store} from "vuex";
+import BaseComponent from "./BaseComponent";
 
 @HtmlTemplate
 @Component({
 })
-export class SampleLoadComponent extends Vue {
-  $store: Store<MainState>;
-
+export class SampleLoadComponent extends BaseComponent {
   /**
    * ライフサイクル
    */

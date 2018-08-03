@@ -1,10 +1,10 @@
 /// <reference path="../../index.d.ts"/>
-import Vue from 'vue'
 import Component from 'vue-class-component'
 import HtmlTemplate from '../../../vhtml/footer.vhtml'
+import BaseComponent from "./BaseComponent";
 
 @HtmlTemplate
 @Component({
 })
-export class FooterComponent extends Vue {
+export class FooterComponent extends BaseComponent {
 }
